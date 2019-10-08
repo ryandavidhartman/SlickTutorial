@@ -12,9 +12,10 @@ class SupplierTable(tag: Tag) extends Table[Supplier](tag, "SUPPLIERS") {
   def city: Rep[String] = column[String]("CITY")
   def state: Rep[String] = column[String]("STATE")
   def zip: Rep[String] = column[String]("ZIP")
+  def rating: Rep[Double] = column[Double]("RATING")
 
   // Every table needs a * projection with the same type as the table's type parameter
-  def * :ProvenShape[Supplier] = (id, name, street, city, state, zip) <> (Supplier.tupled, Supplier.unapply)
+  def * :ProvenShape[Supplier] = (id, name, street, city, state, zip, rating) <> (Supplier.tupled, Supplier.unapply)
 }
 
 class CoffeeTable(tag: Tag) extends Table[Coffee](tag, "COFFEES") {

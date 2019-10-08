@@ -15,7 +15,8 @@ case class Supplier(
   street: String,
   city: String,
   state: String,
-  zip: String
+  zip: String,
+  rating: Double
 )
 
 
