@@ -30,8 +30,5 @@ class CoffeeTable(tag: Tag) extends Table[Coffee](tag, "COFFEES") {
   def * : ProvenShape[Coffee] = (id, name, supID, price, sales, total) <> (Coffee.tupled, Coffee.unapply )
 
   // A reified foreign key relation that can be navigated to create a join
- // def supplier: ForeignKeyQuery[SupplierTable, Supplier] =
- //   foreignKey("SUP_FK", supID, TableQuery[SupplierTable])(_.id)
-
-  def supplier = foreignKey("SUP_FK", supID, TableQuery[SupplierTable])(_.id)
+ def supplier: ForeignKeyQuery[SupplierTable, Supplier] =  foreignKey("SUP_FK", supID, TableQuery[SupplierTable])(_.id)
 }
