@@ -2,7 +2,7 @@ package example
 
 import slick.jdbc.H2Profile.api._
 
-object DBHelpers {
+object Actions {
 
   import  TableQueries._
 
@@ -14,6 +14,9 @@ object DBHelpers {
   val coffee2 = Coffee(2, "Regular", 2, 0.50, 659, 20000)
   val coffee3 = Coffee(3, "Best Coffee", 2, 5.19, 46, 1000)
 
+
+  //Here is a simple Slick DBIOAction that is a sequence of 3 actions.  One Action to create the
+  // db schema and two Actions to insert some data
   def setup(): DBIOAction[Unit, NoStream, Nothing] = DBIO.seq(
     // Create the tables, including primary and foreign keys
     (suppliers.schema ++ coffees.schema).create,
