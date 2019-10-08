@@ -11,9 +11,9 @@ object Actions {
 
   import  TableQueries._
 
-  val supplier1 = new Supplier(1L, "Acme, Inc.", "99 Market Street", "Groundsville", "CA", "95199", 1.0)
-  val supplier2 = new Supplier(2L, "Superior Coffee", "1 Party Place", "Mendocino", "CA", "95460", 2.0)
-  val supplier3 = new Supplier(3L, "The High Ground", "100 Coffee Lane", "Meadows", "CA", "93966", 3.0)
+  val supplier1 = Supplier(1L, "Acme, Inc.", "99 Market Street", "Groundsville", "CA", "95199", 1.0)
+  val supplier2 = Supplier(2L, "Superior Coffee", "1 Party Place", "Mendocino", "CA", "95460", 2.0)
+  val supplier3 = Supplier(3L, "The High Ground", "100 Coffee Lane", "Meadows", "CA", "93966", 3.0)
 
   val coffee1 = Coffee(1, "Acme Special", 1, 1.00, 100, 2000)
   val coffee2 = Coffee(2, "Regular", 2, 0.50, 659, 20000)
