@@ -4,9 +4,8 @@ import java.util.concurrent.Executors
 
 import slick.driver.H2Driver.api._
 
-import scala.concurrent.{Await, ExecutionContext, Future}
-import scala.util.{Failure, Success}
 import scala.concurrent.duration._
+import scala.concurrent.{Await, ExecutionContext}
 
 object HelloTables extends App {
 
