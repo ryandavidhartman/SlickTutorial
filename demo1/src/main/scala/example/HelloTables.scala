@@ -20,8 +20,8 @@ object HelloTables extends App {
   try {
     val resultsF = for {
       _ <- db.run(Actions.setup())
-      count <- db.run(suppliers.result)
-    } yield count
+      allSuppliers <- db.run(suppliers.result)  //TableQuery.result => Slick's version of select *
+    } yield allSuppliers
 
     val results = Await.result(resultsF, 2 seconds)
 

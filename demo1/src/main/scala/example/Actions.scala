@@ -2,6 +2,11 @@ package example
 
 import slick.jdbc.H2Profile.api._
 
+// Tables -> slick's notation of the DB table
+// Queries -> slicks DSL for sql operations
+// Actions -> "commands" to the DB (often just queries), their results comeback async (of course!)
+// Finally we'll be a handle to the db to actually run our actions (db.run(...))
+
 object Actions {
 
   import  TableQueries._
