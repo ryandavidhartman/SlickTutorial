@@ -13,7 +13,7 @@ class SupplierTable(tag: Tag) extends Table[Supplier](tag, "SUPPLIERS") {
   def city: Rep[String] = column[String]("CITY")
   def state: Rep[String] = column[String]("STATE")
   def zip: Rep[String] = column[String]("ZIP")
-  def rating: Rep[Double] = column[Double]("RATING")
+  def rating: Rep[Rating.Value] = column[Rating.Value]("RATING")
 
   implicit val columnType: BaseColumnType[Rating.Value] = MappedColumnType.base[Rating.Value, String](_.toString, Rating.withName)
 

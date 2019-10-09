@@ -24,6 +24,6 @@ case class Supplier(
   city: String,
   state: String,
   zip: String,
-  rating: Double)
+  rating: Rating.Value)
 
 
