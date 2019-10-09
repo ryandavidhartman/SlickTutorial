@@ -26,7 +26,7 @@ object HelloTables extends App {
 
     val results = Await.result(resultsF, 2 seconds)
 
-    println(s"Results: $results")
+    println(s"Suppliers:\n${results.mkString("\n")}\n")
     println("End HelloTables Example!")
   } catch {
     case NonFatal(e) => println(s"Error in HelloTableExample: $e")
