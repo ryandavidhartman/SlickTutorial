@@ -9,6 +9,14 @@ case class Coffee(
   total: Int
 )
 
+object Rating extends Enumeration {
+  val A: Rating.Value = Value("a")
+  val B: Rating.Value = Value("b")
+  val C: Rating.Value = Value("c")
+  val D: Rating.Value = Value("d")
+  val F: Rating.Value = Value("f")
+}
+
 case class Supplier(
   id: Long = 0,
   name: String,
