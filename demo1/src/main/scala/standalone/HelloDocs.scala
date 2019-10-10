@@ -1,6 +1,9 @@
-package com.typesafe.slick.docs
+package standalone
 
-//#imports
+/*
+This code comes from Lightbend/Slick and is completely independent from the rest of
+the demo 1 code base.
+ */
 // Use H2Profile to connect to an H2 database
 import slick.jdbc.H2Profile.api._
 
@@ -10,7 +13,6 @@ import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 
 import scala.collection.mutable.ArrayBuffer
-
 /**
   * A simple example that uses statically typed queries against an in-memory
   * H2 database. The example data comes from Oracle's JDBC tutorial at

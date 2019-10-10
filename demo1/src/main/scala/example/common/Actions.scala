@@ -1,15 +1,10 @@
-package example
+package example.common
 
 import slick.jdbc.H2Profile.api._
 
-// Tables -> slick's notation of the DB table
-// Queries -> slicks DSL for sql operations
-// Actions -> "commands" to the DB (often just queries), their results comeback async (of course!)
-// Finally we'll be a handle to the db to actually run our actions (db.run(...))
-
 object Actions {
 
-  import  TableQueries._
+  import TableQueries._
 
   val supplier1 = Supplier(1L, "Acme, Inc.", "99 Market Street", "Groundsville", "CA", "95199", Rating.A)
   val supplier2 = Supplier(2L, "Superior Coffee", "1 Party Place", "Mendocino", "CA", "95460", Rating.B)

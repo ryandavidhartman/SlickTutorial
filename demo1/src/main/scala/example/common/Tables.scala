@@ -1,7 +1,7 @@
-package example
+package example.common
 
 import slick.jdbc.H2Profile.api._
-import slick.lifted.{ProvenShape, ForeignKeyQuery}
+import slick.lifted.{ForeignKeyQuery, ProvenShape}
 
 
 class SupplierTable(tag: Tag) extends Table[Supplier](tag, "SUPPLIERS") {

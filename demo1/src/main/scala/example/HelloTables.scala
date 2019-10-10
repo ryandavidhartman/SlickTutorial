@@ -6,7 +6,8 @@ import slick.jdbc.H2Profile.api._
 
 import scala.concurrent.duration._
 import scala.concurrent.{Await, ExecutionContext, ExecutionContextExecutor}
-import TableQueries._
+import example.common.TableQueries._
+import example.common.Actions
 
 import scala.util.control.NonFatal
 

@@ -1,4 +1,4 @@
-package example
+package example.common
 
 import slick.lifted.TableQuery
 import slick.jdbc.H2Profile.api._

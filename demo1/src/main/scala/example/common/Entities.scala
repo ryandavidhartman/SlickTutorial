@@ -1,4 +1,4 @@
-package example
+package example.common
 
 case class Coffee(
   id: Long = 0,
